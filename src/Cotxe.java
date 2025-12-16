@@ -16,12 +16,21 @@ public class Cotxe {
         this.identificador = comptadorCotxes;
     }
 
+    public void InfoCoches() {
+        System.out.println(identificador + " " + marca + " " + model);
+    }
+
     public static int getComptadorCotxes() {
         return comptadorCotxes;
     }
 
     public String getInformacio() {
-        return "************ ESPECIFICACIONES " + marca.toUpperCase() + " " + model.toUpperCase() + " ************" + "\nIdentificador: " + identificador + "\nMarca: " + marca + "\nModelo: " + model + "\nAño de fabricacion: " + anyFabricacio + "\nVelocidad actual: " + velocitatActual + "kmh\n";
+        return "************ ESPECIFICACIONES " + marca.toUpperCase() + " " + model.toUpperCase() + " ************" + "\n" +
+                "Identificador: " + identificador + "\n" +
+                "Marca: " + marca + "\n" +
+                "Modelo: " + model + "\n" +
+                "Año de fabricacion: " + anyFabricacio + "\n" +
+                "Velocidad actual: " + velocitatActual + "kmh\n";
     }
 
     public void accelerar(double kmh) {
@@ -38,6 +47,17 @@ public class Cotxe {
         } else {
             System.out.println("Que quieres ir marcha atras o algo? ");
         }
+    }
+
+    public static void GetMenuCotxe() {
+        System.out.println("""
+                    \n1. Enseñar especificaciones de los coches.
+                    2. Enseñar coche en especifico
+                    3. Crear otro coche.
+                    4. Acelerar coche
+                    5. Frenar coche
+                    6. Salir.
+                    """);
     }
 
 }
